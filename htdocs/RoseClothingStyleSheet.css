@@ -1,0 +1,1024 @@
+
+@media only screen 
+{
+    *{
+    margin: 0;
+    padding: 0;
+    }
+   
+    body {
+        background-image: url(MarbleBackground.jpg);
+        height: 100%;
+    }
+    #LogoPng{
+        height: 70px;
+
+    }
+    .navbar-toggler{
+        background-color: #f7d0cb;
+        
+    }
+    .navbar-toggler-icon{
+       align-self: center;
+    }
+    #Title {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 50px;
+        font-style: oblique;
+        font-weight: bold;
+        margin-top: -60px;
+        margin-left: 70px;
+       
+    }
+   
+    #Menu {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: 20px;
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    .nav-item{
+        margin-top: 20px;
+    }
+    
+    #SearchBarBox{
+        padding: 1%;
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+      
+       
+    }
+    #SearchBtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+
+        border: none;
+    }
+
+    #SearchBtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    #navbarDropdown {
+   
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: 30px;
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    .dropdown-menu a:hover {
+        background-color: #ddd
+    }
+
+    #Dropdown:hover #Dropdown-content {
+        display: block;
+    }
+    #SignUpH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left:10%;
+        margin-top: 80px;
+    }
+     #DeliveryHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    } 
+    #InformationTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #InformationText{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #ContactUsHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    }
+    #LoginH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left: 10%;
+        margin-top: 80px;
+    }
+       #UserAccountHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        margin-left:10%;
+        margin-top: 50px;
+    } 
+    #submitUA{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:15%;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #submitUA:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    label{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+   
+ #firstname1 {
+         margin-left: 10%;
+    }
+    #firstnameUA {
+         margin-left: 15%;
+    }
+    #lastname1 {
+         margin-left: 10%;
+    }
+    #lastnameUA {
+         margin-left: 15%;
+    }
+    #emailL1 {
+         margin-left: 10%;
+    }
+     #emailUA{
+         margin-left: 15%;
+    }
+    #passwordL1{
+         margin-left: 10%;
+    }
+     #passwordUA{
+         margin-left: 15%;
+    }
+    #address1 {
+         margin-left: 10%;
+    }
+    #addressUA {
+         margin-left: 15%;
+    }
+    input{
+        width: 300px;
+        padding: 2px;
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    textarea{
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    #firstname{
+        margin-left: 10%;
+    }
+    #firstnameLabel{
+        margin-left: 15%;
+    }
+    #lastname{
+        margin-left: 10%;
+    }
+    #lastnameLabel{
+        margin-left: 15%;
+    }
+    #email{
+        margin-left: 10%;
+    }
+    #emailLabel{
+        margin-left: 15%;
+    }
+    #password{
+        margin-left: 10%;    
+    }
+    #passwordLabel{
+        margin-left: 15%;    
+    }
+    #email1{
+        margin-left: 10%;
+    }
+    #password1{
+        margin-left: 10%;
+    }
+    #address{
+        margin-left: 10%;
+    }
+    #addressLabel{
+        margin-left: 15%;
+    }
+    #submit{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:10%;
+        font-weight: bold;
+    }
+
+    #submit:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #loginbtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #loginbtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #forgotPass{
+        background-color: transparent;
+        width: 300px;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #forgotPass:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    
+    #Login{
+        margin-top: 20px;
+        margin-bottom: 100px;
+        
+    }
+      #exampleModalLongTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+      
+    }
+ #emailF{
+        color: black;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+        
+    }
+
+   .btn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+         padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    
+    }
+    
+  
+}
+
+@media only screen and (min-width: 600px) {
+*{
+    margin: 0;
+    padding: 0;
+    }
+   
+    body {
+        background-image: url(MarbleBackground.jpg);
+        height: 100%;
+    }
+    #LogoPng{
+        height: 70px;
+
+    }
+    .navbar-toggler{
+        background-color: #f7d0cb;
+        
+    }
+    .navbar-toggler-icon{
+       align-self: center;
+    }
+    #Title {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 50px;
+        font-style: oblique;
+        font-weight: bold;
+        margin-top: -60px;
+        margin-left: 70px;
+       
+    }
+   
+    #Menu {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: 10px;
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    .nav-item{
+        margin-top: 20px;
+    }
+    
+    #SearchBarBox{
+        padding: 1%;
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+      
+       
+    }
+    #SearchBtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+
+        border: none;
+    }
+
+    #SearchBtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    #navbarDropdown {
+   
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: px;
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    .dropdown-menu a:hover {
+        background-color: #ddd
+    }
+
+    #Dropdown:hover #Dropdown-content {
+        display: block;
+    }
+    #SignUpH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left:10%;
+        margin-top: 80px;
+    }
+    #LoginH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left: 10%;
+        margin-top: 80px;
+    }
+    #UserAccountHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        margin-left:25%;
+        margin-top: 50px;
+    } 
+     #DeliveryHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    } 
+    #InformationTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #InformationText{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #ContactUsHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    }
+    label{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+   
+ #firstname1 {
+         margin-left: 10%;
+    }
+    #firstnameUA {
+         margin-left: 30%;
+    }
+    #lastname1 {
+         margin-left: 10%;
+    }
+    #lastnameUA {
+         margin-left: 30%;
+    }
+    #emailL1 {
+         margin-left: 10%;
+    }
+     #emailUA{
+         margin-left: 30%;
+    }
+    #passwordL1{
+         margin-left: 10%;
+    }
+     #passwordUA{
+         margin-left: 30%;
+    }
+    #address1 {
+         margin-left: 10%;
+    }
+    #addressUA {
+         margin-left: 30%;
+    }
+    input{
+        width: 300px;
+        padding: 2px;
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    textarea{
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    #firstname{
+        margin-left: 10%;
+    }
+    #firstnameLabel{
+        margin-left: 30%;
+    }
+    #lastname{
+        margin-left: 10%;
+    }
+    #lastnameLabel{
+        margin-left: 30%;
+    }
+    #email{
+        margin-left: 10%;
+    }
+    #emailLabel{
+        margin-left: 30%;
+    }
+    #password{
+        margin-left: 10%;    
+    }
+    #passwordLabel{
+        margin-left: 30%;    
+    }
+    #email1{
+        margin-left: 10%;
+    }
+    #password1{
+        margin-left: 10%;
+    }
+    #address{
+        margin-left: 10%;
+    }
+    #addressLabel{
+        margin-left: 30%;
+    }
+    #submit{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:10%;
+        font-weight: bold;
+    }
+
+    #submit:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    #submitUA{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:30%;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #submitUA:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #loginbtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #loginbtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #forgotPass{
+        background-color: transparent;
+        width: 300px;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #forgotPass:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    
+    #Login{
+        margin-top: 20px;
+        margin-bottom: 100px;
+        
+    }
+      #exampleModalLongTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+      
+    }
+ #emailF{
+        color: black;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+        
+    }
+
+   .btn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+         padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    
+    }
+    
+  
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  *{
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+        background-image: url(MarbleBackground.jpg);
+        height: 100%;
+    }
+    #LogoPng{
+        height: 70px;
+
+    }
+    .navbar-toggler{
+        background-color: #f7d0cb;
+        
+    }
+    .navbar-toggler-icon{
+       align-self: center;
+    }
+    #Title {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 50px;
+        font-style: oblique;
+        font-weight: bold;
+        margin-top: -60px;
+        margin-left: 70px;
+       
+    }
+   
+    #Menu {
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: 10px;
+        margin-right: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    .nav-item{
+        margin-top: 20px;
+    }
+    
+    #SearchBarBox{
+        padding: 1%;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+      
+       
+    }
+    #SearchBtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+
+        border: none;
+    }
+
+    #SearchBtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    #navbarDropdown {
+   
+        font-family: "Courier New", Courier, monospace;
+        color: #f7d0cb;
+        font-size: 25px;
+        padding: 15px;
+        margin-right: 10px;
+        border: none;
+        background-color: transparent;
+       
+    }
+  
+    .dropdown-menu a:hover {
+        background-color: #ddd
+    }
+
+    #Dropdown:hover #Dropdown-content {
+        display: block;
+    }
+    #SignUpH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left:10%;
+        margin-top: 80px;
+    }
+
+
+    #LoginH1 {
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        margin-left: 10%;
+        margin-top: 80px;
+    }
+    #ContactUs{
+        margin-left: 35%;
+    }
+    #UserAccountHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 55px;
+        margin-left:30%;
+        margin-top: 50px;
+    } 
+    #DeliveryHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:30%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    } 
+    #InformationTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #InformationText{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+    }
+    #ContactUsHeader{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 2%;
+        margin-top: 50px;
+        text-decoration-line: underline;
+    }
+    label{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    #firstname1 {
+         margin-left: 10%;
+    }
+    #firstnameUA {
+         margin-left: 35%;
+    }
+    #lastname1 {
+         margin-left: 10%;
+    }
+    #lastnameUA {
+         margin-left: 35%;
+    }
+    #emailL1 {
+         margin-left: 10%;
+    }
+     #emailUA{
+         margin-left: 35%;
+    }
+    #passwordL1{
+         margin-left: 10%;
+    }
+     #passwordUA{
+         margin-left: 35%;
+    }
+    #address1 {
+         margin-left: 10%;
+    }
+    #addressUA {
+         margin-left: 35%;
+    }
+    input{
+        width: 300px;
+        padding: 2px;
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    textarea{
+        border-width: 3px;
+        border-color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
+    }
+    #firstname{
+        margin-left: 10%;
+    }
+    #firstnameLabel{
+        margin-left: 35%;
+    }
+    #lastname{
+        margin-left: 10%;
+    }
+    #lastnameLabel{
+        margin-left: 35%;
+    }
+    #email{
+        margin-left: 10%;
+    }
+    #emailLabel{
+        margin-left: 35%;
+    }
+    #password{
+        margin-left: 10%;    
+    }
+    #passwordLabel{
+        margin-left: 35%;    
+    }
+    #email1{
+        margin-left: 10%;
+    }
+    #password1{
+        margin-left: 10%;
+    }
+    #address{
+        margin-left: 10%;
+    }
+    #addressLabel{
+        margin-left: 35%;
+    }
+ 
+    #submit{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:10%;
+        font-weight: bold;
+    }
+
+    #submit:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    #submitUA{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left:35%;
+        font-weight: bold;
+    }
+
+    #submitUA:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #loginbtn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #loginbtn:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+
+    #forgotPass{
+        background-color: transparent;
+        width: 300px;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        height: 60px;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10%;
+        font-weight: bold;
+    }
+
+    #forgotPass:hover {
+        background-color: #f7d0cb;
+        color: white;
+    }
+    
+    #SignUp{
+        margin-left: 2%;
+        margin-bottom: 30px;
+    }
+
+    #Login{
+        margin-left: 50%;
+        margin-top: -760px;
+    }
+    #exampleModalLongTitle{
+        color: #f7d0cb;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+      
+    }
+    #emailF{
+        color: black;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration-line: underline;
+        font-weight: bold;
+        
+    }
+    .btn{
+        background-color: transparent;
+        color: #f7d0cb;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #f7d0cb;
+        color: white;
+        border: none;
+    
+    }
+ 
+    
+}
+
