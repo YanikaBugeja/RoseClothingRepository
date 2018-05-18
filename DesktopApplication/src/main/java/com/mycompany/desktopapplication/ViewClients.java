@@ -33,11 +33,11 @@ public class ViewClients extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/roseclothing", "root", "");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from client where ClientName like '%"+SearchBar2.getText()+"'");
+            ResultSet rs = stmt.executeQuery("select * from client");
             DefaultTableModel model = (DefaultTableModel) ClientsTable.getModel();
             while (rs.next()) {
                 
-                model.addRow(new Object[]{rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4),rs.getInt(5)});
+                model.addRow(new Object[]{rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5), rs.getString(6)});
             }
             con.close();
         } catch (Exception e) {
@@ -56,10 +56,8 @@ public class ViewClients extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        SearchBar2 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         ClientsTable = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,13 +66,6 @@ public class ViewClients extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 153, 204));
         jLabel1.setText("View Registered Clients");
-
-        SearchBar2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        SearchBar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SearchBar2ActionPerformed(evt);
-            }
-        });
 
         ClientsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -86,42 +77,26 @@ public class ViewClients extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(ClientsTable);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel2.setText("Client Name : ");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 37, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(SearchBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(113, 113, 113))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SearchBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
 
@@ -139,10 +114,6 @@ public class ViewClients extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SearchBar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SearchBar2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -150,9 +121,7 @@ public class ViewClients extends javax.swing.JFrame {
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ClientsTable;
-    private javax.swing.JTextField SearchBar2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

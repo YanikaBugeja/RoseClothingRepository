@@ -31,11 +31,11 @@ public class ViewOrders extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/roseclothing", "root", "");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from orders where OrderId like '%"+SearchBar.getText()+"'");
+            ResultSet rs = stmt.executeQuery("select * from orders");
             DefaultTableModel model = (DefaultTableModel) OrdersTable.getModel();
             while (rs.next()) {
                 
-                model.addRow(new Object[]{rs.getInt(1), rs.getString(2), rs.getInt(3)});
+                model.addRow(new Object[]{rs.getString(1), rs.getString(2), rs.getInt(3),rs.getInt(4),rs.getInt(5)});
             }
             con.close();
         } catch (Exception e) {
@@ -84,7 +84,7 @@ public class ViewOrders extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Order ID", "Order Status", "Client ID"
+                "Order Status", "Client ID", "InventoryID", "ID", "Order ID"
             }
         ));
         OrdersTable.setGridColor(new java.awt.Color(255, 255, 255));

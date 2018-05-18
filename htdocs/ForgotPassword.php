@@ -4,7 +4,7 @@
    if (isset($_POST['PasswordButton'])) {
    
       // receive all input values from the form
-      $email = $_POST['email'];
+       $email = $_POST['email'];
      	 #Superglobal
         $conn = mysqli_connect ('localhost', 'root','', 'roseclothing', '3306')or die ('Cannot Connect');
        	require($_SERVER['DOCUMENT_ROOT'].'/phpmailer/PHPMailerAutoload.php'); #Superglobal

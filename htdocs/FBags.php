@@ -44,7 +44,7 @@
             <a class="nav-link" href="Help.html" id="Menu">Help</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ShoppingCart.html" id="Menu">Shopping Cart</a>
+            <a class="nav-link" href="ShoppingCart.php" id="Menu">Shopping Cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="LogOut.php" id="Menu" >Log Out</a>

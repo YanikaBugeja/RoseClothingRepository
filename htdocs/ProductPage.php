@@ -1,10 +1,12 @@
 <?php
     session_start();
     error_reporting(0);
-$pid = $_GET['id'];
+    $pid = $_GET['id'];
     $conn = mysqli_connect ('localhost', 'root','', 'roseclothing', '3306')or die ('Cannot Connect');
-    $query = "select * from inventory where InventoryId = $pid";
+    $query = "select * from inventory where InventoryId = '$pid'";
     $result = mysqli_query($conn,$query);
+    
+
 
 ?>
 
@@ -47,7 +49,7 @@ $pid = $_GET['id'];
             <a class="nav-link" href="Help.html" id="Menu">Help</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ShoppingCart.html" id="Menu">Shopping Cart</a>
+            <a class="nav-link" href="ShoppingCart.php" id="Menu">Shopping Cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="LogOut.php" id="Menu" >Log Out</a>
@@ -130,26 +132,19 @@ $pid = $_GET['id'];
             echo" <div class= 'col-lg-4 col-md-4 col-sm-12' style='margin-top:5%;' >";
                 echo "<h1  style = 'color: white; font-family: Courier New, Courier, monospae; text-align: center;'> $row[InventoryDesc] </h1>";
                 echo "<h2  style = 'color: white; font-family: Courier New, Courier, monospace; text-align: center;'> &#8364 $row[InventoryPrice]</h2>";
+    $_SESSION['inventory'] = $row[InventoryId];
     ?>
+         <form action="Cartbtn.php"  method= "post">
           <div id="buttons">
-           <div class="dropdown" style="margin-left: 35%;
-        margin-bottom: 10%; margin-top : 10%;">
-              <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Size
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Small</a>
-                <a class="dropdown-item" href="#">Medium</a>
-                <a class="dropdown-item" href="#">Large</a>
-                <a class="dropdown-item" href="#">Extra Large</a>
-              </div>
-            </div>
+       
+            <input type="text"value="<?php echo $pid; ?>" name="pid" hidden>
             
-            <button class="btn btn-secondary"  type="button" id="dropdownMenuButton"style="margin-left: 25%;
+            <button class="btn btn-secondary" type="submit" name="AddBtn" id="AddBtn"style="margin-left: 25%;
         margin-bottom: 10%;"  >
                Add To Cart
               </button>
         </div>
-    
+        </form>
+  
 </body>
 </html>
