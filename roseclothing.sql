@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2018 at 11:25 AM
+-- Generation Time: May 18, 2018 at 07:34 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -68,7 +68,10 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`ClientId`, `ClientName`, `ClientSurname`, `ClientEmail`, `ClientPassword`, `ClientAddress`) VALUES
 (14, 'Yanika', 'Bugeja', 'yanikabugeja@hotmail.co.uk', 'testing1', 'BKR 4310'),
-(15, 'Test', 'Account', 'testemail@gmail.com', 'testing2', 'Test Address');
+(15, 'Test', 'Account', 'testemail@gmail.com', 'testing2', 'Test Address'),
+(16, 'Test2', 'Account2', 'yanika.bugeja.b31253@mcast.edu.mt', 'testing3', 'Test Address 2'),
+(17, 'Yanika', 'Bugeja', 'TestingEmail@gmail.com', 'Testing123', ' BRK 123'),
+(18, 'testingaccount', 'testingaccount2', 'testing@gmail.com', '1234567', ' atr 223');
 
 -- --------------------------------------------------------
 
@@ -148,8 +151,17 @@ INSERT INTO `inventory` (`InventoryId`, `InventoryDesc`, `InventoryImage`, `Inve
 
 CREATE TABLE `inventory_orders` (
   `OrderId` int(11) NOT NULL,
-  `InventoryId` int(11) NOT NULL
+  `InventoryId` int(11) NOT NULL,
+  `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `inventory_orders`
+--
+
+INSERT INTO `inventory_orders` (`OrderId`, `InventoryId`, `ID`) VALUES
+(0, 9, 8),
+(0, 16, 9);
 
 -- --------------------------------------------------------
 
@@ -158,10 +170,27 @@ CREATE TABLE `inventory_orders` (
 --
 
 CREATE TABLE `orders` (
-  `OrderId` int(11) NOT NULL,
-  `OrderStatus` varchar(15) NOT NULL,
-  `ClientId` int(2) NOT NULL
+  `OrderStatus` varchar(15) DEFAULT NULL,
+  `ClientId` int(2) NOT NULL,
+  `InventoryId` int(10) DEFAULT NULL,
+  `ID` int(11) NOT NULL,
+  `OrderId` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`OrderStatus`, `ClientId`, `InventoryId`, `ID`, `OrderId`) VALUES
+('Processing', 14, 3, 21, 9),
+('Processing', 14, 1, 22, 8),
+('Processing', 14, 1, 23, 7),
+('Processing', 14, 1, 24, 6),
+('Processing', 14, 1, 25, 5),
+('Processing', 14, 1, 26, 4),
+('Processing', 14, 10, 27, 3),
+('Processing', 14, 10, 28, 2),
+('Processing', 14, 5, 29, 1);
 
 --
 -- Indexes for dumped tables
@@ -198,16 +227,19 @@ ALTER TABLE `inventory`
 -- Indexes for table `inventory_orders`
 --
 ALTER TABLE `inventory_orders`
-  ADD PRIMARY KEY (`OrderId`,`InventoryId`),
+  ADD PRIMARY KEY (`ID`),
   ADD KEY `OrderId` (`OrderId`),
-  ADD KEY `InventoryId` (`InventoryId`);
+  ADD KEY `InventoryId` (`InventoryId`),
+  ADD KEY `OrderId_2` (`OrderId`);
 
 --
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`OrderId`),
-  ADD KEY `ClientId` (`ClientId`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ClientId` (`ClientId`),
+  ADD KEY `ClientId_2` (`ClientId`),
+  ADD KEY `InventoryId` (`InventoryId`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -223,7 +255,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `ClientId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ClientId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `gender`
@@ -238,10 +270,16 @@ ALTER TABLE `inventory`
   MODIFY `InventoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `inventory_orders`
+--
+ALTER TABLE `inventory_orders`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `OrderId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Constraints for dumped tables
@@ -255,17 +293,11 @@ ALTER TABLE `inventory`
   ADD CONSTRAINT `inventory_ibfk_2` FOREIGN KEY (`GenderId`) REFERENCES `gender` (`GenderId`);
 
 --
--- Constraints for table `inventory_orders`
---
-ALTER TABLE `inventory_orders`
-  ADD CONSTRAINT `inventory_orders_ibfk_1` FOREIGN KEY (`InventoryId`) REFERENCES `inventory` (`InventoryId`),
-  ADD CONSTRAINT `inventory_orders_ibfk_2` FOREIGN KEY (`OrderId`) REFERENCES `orders` (`OrderId`);
-
---
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`ClientId`) REFERENCES `client` (`ClientId`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`ClientId`) REFERENCES `client` (`ClientId`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`InventoryId`) REFERENCES `inventory` (`InventoryId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
